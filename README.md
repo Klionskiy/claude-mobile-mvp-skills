@@ -10,6 +10,8 @@ This plugin is useful when you want to move from an app idea to a practical MVP 
 
 The skills are intentionally focused on **small, shippable mobile products**, not large design systems or enterprise apps.
 
+> Figma MCP is required for Figma-related workflows such as reading Figma files, creating editable Figma layouts, and generating SwiftUI from Figma frames. The `appstore-mvp-review` skill can be used without Figma MCP.
+
 ---
 
 ## Included skills
@@ -158,21 +160,6 @@ Then use the skills from Claude Code:
 /mobile-mvp-product:swiftui-from-figma
 /mobile-mvp-product:appstore-mvp-review
 ```
-
----
-
-## Requirements
-
-For Figma-related workflows, configure Figma MCP in Claude Code first.
-
-The skills are most useful when Claude Code can access:
-
-* your Figma file or selected frame
-* your product description
-* your target platform
-* your preferred architecture
-* your visual references
-* your implementation constraints
 
 ---
 
