@@ -118,7 +118,7 @@ Flag likely issues when the app:
 - Has almost no native interaction beyond upload → AI answer
 - Uses placeholder content across many screens
 - Hides nearly all value behind a paywall immediately
-- Makes medical, legal, financial, or exam-guarantee claims without appropriate caution
+- Makes medical, legal, financial, or outcome-guarantee claims without appropriate caution
 - Has no meaningful saved state/history/progress
 - Uses misleading screenshots or exaggerated copy
 

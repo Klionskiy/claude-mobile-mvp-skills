@@ -119,8 +119,8 @@ Example:
 /mobile-mvp-product:mobile-figma-designer
 
 Using this Figma file: <FIGMA_FILE_URL>
-Create iOS MVP screens for an AI Plant Care app.
-Include onboarding, home, add plant, AI result, care plan, paywall, settings, and edge states.
+Create iOS MVP screens for a hobby tracker app called HobbyLoop.
+Include onboarding, home, add hobby, hobby detail, session logging, weekly progress, reminder setup, paywall, settings, and edge states.
 Use auto layout, reusable components, and clear layer names.
 ```
 
@@ -170,9 +170,9 @@ Example:
 /mobile-mvp-product:appstore-mvp-review
 
 Review this MVP for App Store readiness and thin-wrapper risk.
-App: AI Plant Care
-Features: scan plant, identify plant, create care plan, reminders, diagnose issues, recovery timeline, paywall after first plan.
-Competitors: Planta, PictureThis, PlantIn.
+App: HobbyLoop
+Features: create hobby profile, set weekly goals, log sessions, add notes/photos, track progress, set reminders, paywall after first hobby profile.
+Competitors: generic habit trackers, reminder apps, and simple journaling apps.
 Goal: release a credible MVP without overbuilding.
 ```
 

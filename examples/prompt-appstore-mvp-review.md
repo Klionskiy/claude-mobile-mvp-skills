@@ -5,17 +5,18 @@
 
 Review this MVP plan for App Store readiness and 4.3/thin-wrapper risk.
 
-App: AI Plant Care
+App: HobbyLoop
 Features:
-- scan plant by photo
-- identify plant with AI
-- create care plan
-- reminders
-- diagnose visible issues
-- plant recovery timeline
-- paywall after first plan
+- create a hobby profile
+- set a lightweight weekly goal
+- log practice sessions
+- add notes and photos
+- track weekly progress
+- reminder setup
+- simple streaks and milestones
+- paywall after the user creates the first hobby profile
 
-Competitors: Planta, PictureThis, PlantIn
+Competitors: generic habit trackers, reminder apps, and simple journaling apps
 Goal: release a credible MVP without overbuilding.
 
 Give me verdict, biggest risks, minimum credible MVP, differentiation ideas, and what can wait.
