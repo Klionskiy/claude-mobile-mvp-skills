@@ -1,0 +1,15 @@
+{
+  "name": "mobile-mvp-product",
+  "displayName": "Mobile MVP Product Skills",
+  "version": "1.0.0",
+  "description": "Skills for designing mobile MVPs in Figma, converting approved Figma designs into SwiftUI, and reviewing MVP scope for App Store readiness.",
+  "author": {
+    "name": "Gosha Klionski",
+    "url": "https://github.com/klionskiy"
+  },
+  "homepage": "https://github.com/klionskiy/claude-mobile-mvp-skills",
+  "repository": "https://github.com/klionskiy/claude-mobile-mvp-skills",
+  "license": "MIT",
+  "keywords": ["figma", "mobile", "swiftui", "ios", "mvp", "app-store"],
+  "skills": "./skills"
+}

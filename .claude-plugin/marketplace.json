@@ -1,0 +1,26 @@
+{
+  "name": "mobile-mvp-skills",
+  "owner": {
+    "name": "Gosha Klionski",
+    "url": "https://github.com/klionskiy"
+  },
+  "plugins": [
+    {
+      "name": "mobile-mvp-product",
+      "displayName": "Mobile MVP Product Skills",
+      "source": "./plugins/mobile-mvp-product",
+      "description": "Claude Code skills for Figma mobile MVP design, SwiftUI implementation from Figma, and App Store MVP review.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Gosha Klionski",
+        "url": "https://github.com/klionskiy"
+      },
+      "homepage": "https://github.com/klionskiy/claude-mobile-mvp-skills",
+      "repository": "https://github.com/klionskiy/claude-mobile-mvp-skills",
+      "license": "MIT",
+      "category": "product-development",
+      "tags": ["figma", "mobile", "ios", "swiftui", "mvp", "app-store", "claude-code"],
+      "keywords": ["figma", "mobile app", "swiftui", "app store review", "mvp", "product design"]
+    }
+  ]
+}
