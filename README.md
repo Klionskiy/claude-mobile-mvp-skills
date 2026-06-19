@@ -1,16 +1,285 @@
 # Claude Mobile MVP Skills
 
-A small Claude Code plugin marketplace with three practical skills for building mobile app MVPs:
+Claude Code skills for designing mobile MVPs in Figma, generating SwiftUI from Figma, and reviewing App Store readiness.
 
-1. **mobile-figma-designer** — create clean, editable mobile MVP interfaces in Figma using Figma MCP.
-2. **swiftui-from-figma** — convert approved Figma mobile screens into SwiftUI code.
-3. **appstore-mvp-review** — review MVP scope, differentiation, thin-wrapper risk, and App Store readiness.
+This plugin is useful when you want to move from an app idea to a practical MVP structure faster:
 
-The skills are designed for indie developers, iOS developers, and product builders who want to move from idea → Figma → SwiftUI → release faster.
+* create mobile app screens in Figma
+* turn approved Figma screens into SwiftUI
+* review MVP scope, differentiation, paywall placement, and App Store review risks
+
+The skills are intentionally focused on **small, shippable mobile products**, not large design systems or enterprise apps.
 
 ---
 
-## What this repository contains
+## Included skills
+
+### 1. `mobile-figma-designer`
+
+Use this skill to create or improve mobile app interfaces in Figma.
+
+Best for:
+
+* onboarding
+* home screens
+* core feature flows
+* empty states
+* loading states
+* error states
+* paywalls
+* settings
+* lightweight design systems
+* implementation-friendly mobile layouts
+
+Example:
+
+```text
+/mobile-mvp-product:mobile-figma-designer
+
+Create a mobile MVP design for an iOS app called HobbyLoop.
+
+Core idea:
+- User tracks hobbies and small personal projects
+- User can set simple weekly goals
+- User can log sessions, notes, photos, and progress milestones
+- App sends lightweight reminders without feeling like a strict productivity tool
+
+Create:
+- onboarding
+- home
+- hobby detail
+- session log
+- progress screen
+- reminders screen
+- paywall
+- settings
+- empty/loading/error states
+
+Use clean iOS-style UI, Auto Layout, reusable components, and clear layer names.
+```
+
+---
+
+### 2. `swiftui-from-figma`
+
+Use this skill after the Figma design is approved.
+
+Best for:
+
+* translating Figma frames into SwiftUI
+* creating reusable SwiftUI components
+* preserving spacing and hierarchy
+* mapping design tokens to code
+* building screens that are realistic to implement
+* avoiding over-engineered UI code
+
+Example:
+
+```text
+/mobile-mvp-product:swiftui-from-figma
+
+Read the selected Figma frames and generate SwiftUI implementation for this MVP.
+
+Use:
+- SwiftUI
+- iOS 16+
+- reusable components
+- MVVM-friendly structure
+- clear file names
+- preview data
+- no unnecessary dependencies
+
+Start with the home screen, hobby detail screen, and session log screen.
+```
+
+---
+
+### 3. `appstore-mvp-review`
+
+Use this skill before building too much or before submitting a mobile MVP.
+
+Best for:
+
+* MVP scope review
+* differentiation ideas
+* App Store review risk review
+* clone / thin-app risk review
+* paywall placement review
+* deciding what must ship vs what can wait
+* making the product feel more complete without overbuilding
+
+Example:
+
+```text
+/mobile-mvp-product:appstore-mvp-review
+
+Review this MVP for App Store readiness and product risk.
+
+App: HobbyLoop
+
+Features:
+- create hobby profile
+- set weekly goals
+- log sessions
+- add notes/photos
+- track progress
+- set reminders
+- paywall after first hobby profile
+
+Competitors:
+- generic habit trackers
+- reminder apps
+- simple journaling apps
+
+Goal:
+Release a credible MVP without overbuilding.
+```
+
+---
+
+## Installation
+
+Add the plugin marketplace:
+
+```text
+/plugin marketplace add klionskiy/claude-mobile-mvp-skills
+```
+
+Install the plugin:
+
+```text
+/plugin install mobile-mvp-product@mobile-mvp-skills
+```
+
+Then use the skills from Claude Code:
+
+```text
+/mobile-mvp-product:mobile-figma-designer
+/mobile-mvp-product:swiftui-from-figma
+/mobile-mvp-product:appstore-mvp-review
+```
+
+---
+
+## Requirements
+
+For Figma-related workflows, configure Figma MCP in Claude Code first.
+
+The skills are most useful when Claude Code can access:
+
+* your Figma file or selected frame
+* your product description
+* your target platform
+* your preferred architecture
+* your visual references
+* your implementation constraints
+
+---
+
+## Recommended workflow
+
+### Step 1: Plan the MVP
+
+Use `appstore-mvp-review` first if the product is still early.
+
+It helps answer:
+
+* is the MVP too small?
+* is the idea differentiated enough?
+* does it feel like a real app?
+* is the paywall too aggressive?
+* what should be built first?
+* what can wait?
+
+---
+
+### Step 2: Create the Figma structure
+
+Use `mobile-figma-designer` to create the first version of the design.
+
+Recommended input:
+
+```text
+/mobile-mvp-product:mobile-figma-designer
+
+Create a mobile MVP design for [app name].
+
+Target platform: iOS
+Audience: [target audience]
+Core job: [what the app helps users do]
+
+Main screens:
+1. [screen]
+2. [screen]
+3. [screen]
+
+Important constraints:
+- [constraint]
+- [constraint]
+
+Use clean mobile UI, reusable components, Auto Layout, and implementation-friendly structure.
+```
+
+---
+
+### Step 3: Review the design
+
+Before writing code, ask Claude to review the Figma structure:
+
+```text
+/mobile-mvp-product:appstore-mvp-review
+
+Review the current Figma MVP structure.
+
+Focus on:
+- missing core screens
+- weak differentiation
+- confusing UX
+- paywall placement
+- thin-app risk
+- what should be simplified before development
+```
+
+---
+
+### Step 4: Generate SwiftUI
+
+After the design is approved, use `swiftui-from-figma`:
+
+```text
+/mobile-mvp-product:swiftui-from-figma
+
+Generate SwiftUI code from the selected Figma frames.
+
+Use:
+- iOS 16+
+- SwiftUI
+- reusable components
+- MVVM-friendly structure
+- clear previews
+- no unnecessary packages
+```
+
+---
+
+## What this plugin is not
+
+This plugin is not a replacement for a professional designer.
+
+It is best for:
+
+* founders
+* indie developers
+* mobile engineers
+* early MVPs
+* quick product validation
+* design-to-code workflows
+
+It helps create a practical first version that can be reviewed, improved, and implemented.
+
+---
+
+## Repository structure
 
 ```text
 claude-mobile-mvp-skills/
@@ -22,280 +291,15 @@ claude-mobile-mvp-skills/
 │       │   └── plugin.json
 │       └── skills/
 │           ├── mobile-figma-designer/
-│           │   ├── SKILL.md
-│           │   └── references/
+│           │   └── SKILL.md
 │           ├── swiftui-from-figma/
-│           │   ├── SKILL.md
-│           │   └── references/
+│           │   └── SKILL.md
 │           └── appstore-mvp-review/
-│               ├── SKILL.md
-│               └── references/
+│               └── SKILL.md
 ├── examples/
 ├── LICENSE
 └── README.md
 ```
-
-This repo is both:
-
-- a **Claude Code plugin marketplace** via `.claude-plugin/marketplace.json`
-- a **plugin package** via `plugins/mobile-mvp-product/`
-
----
-
-## Requirements
-
-- Claude Code installed and authenticated
-- Figma MCP configured if you want Claude to read/write Figma files
-- An iOS project if you want to use the SwiftUI implementation skill
-
----
-
-## Install locally for testing
-
-Clone the repository:
-
-```bash
-git clone https://github.com/klionskiy/claude-mobile-mvp-skills.git
-cd claude-mobile-mvp-skills
-```
-
-Open Claude Code from any project and add the local marketplace:
-
-```text
-/plugin marketplace add /absolute/path/to/claude-mobile-mvp-skills
-```
-
-Install the plugin:
-
-```text
-/plugin install mobile-mvp-product@mobile-mvp-skills
-```
-
-Reload plugins if needed:
-
-```text
-/reload-plugins
-```
-
-Use the skills:
-
-```text
-/mobile-mvp-product:mobile-figma-designer
-/mobile-mvp-product:swiftui-from-figma
-/mobile-mvp-product:appstore-mvp-review
-```
-
----
-
-## Install from GitHub
-
-After this repo is public, users can add the marketplace directly from GitHub:
-
-```text
-/plugin marketplace add klionskiy/claude-mobile-mvp-skills
-```
-
-Then install the plugin:
-
-```text
-/plugin install mobile-mvp-product@mobile-mvp-skills
-```
-
-Use it:
-
-```text
-/mobile-mvp-product:mobile-figma-designer
-```
-
----
-
-## Skill 1: mobile-figma-designer
-
-Use this when you want Claude to create or improve mobile app screens in Figma.
-
-Example:
-
-```text
-/mobile-mvp-product:mobile-figma-designer
-
-Using this Figma file: <FIGMA_FILE_URL>
-Create iOS MVP screens for a hobby tracker app called HobbyLoop.
-Include onboarding, home, add hobby, hobby detail, session logging, weekly progress, reminder setup, paywall, settings, and edge states.
-Use auto layout, reusable components, and clear layer names.
-```
-
-Best for:
-
-- MVP wireframes
-- clean first visual direction
-- onboarding flows
-- paywalls
-- empty/error/loading states
-- design systems for small apps
-- competitor-inspired but non-clone UI
-
----
-
-## Skill 2: swiftui-from-figma
-
-Use this after a Figma screen is approved and you want Claude to implement it in SwiftUI.
-
-Example:
-
-```text
-/mobile-mvp-product:swiftui-from-figma
-
-Using this Figma frame: <FIGMA_FRAME_URL>
-Implement the Home screen in SwiftUI.
-Follow the existing project architecture, reuse existing colors/components, add previews, and include loading, empty, and error states.
-```
-
-Best for:
-
-- SwiftUI screen implementation
-- mapping Figma components to SwiftUI views
-- creating previews with mock data
-- keeping design and code aligned
-- preserving your existing architecture
-
----
-
-## Skill 3: appstore-mvp-review
-
-Use this before building too much or submitting to App Store review.
-
-Example:
-
-```text
-/mobile-mvp-product:appstore-mvp-review
-
-Review this MVP for App Store readiness and thin-wrapper risk.
-App: HobbyLoop
-Features: create hobby profile, set weekly goals, log sessions, add notes/photos, track progress, set reminders, paywall after first hobby profile.
-Competitors: generic habit trackers, reminder apps, and simple journaling apps.
-Goal: release a credible MVP without overbuilding.
-```
-
-Best for:
-
-- MVP scope review
-- differentiation ideas
-- App Store 4.3-style clone/thin app risk review
-- paywall placement review
-- deciding what must ship vs what can wait
-
----
-
-## Figma MCP setup note
-
-This plugin does not install Figma MCP by itself. It only gives Claude better behavior when Figma MCP is available.
-
-A typical Claude Code setup uses Figma's MCP server/plugin connection, then you pass a Figma file or frame URL to Claude. Once connected, the `mobile-figma-designer` skill tells Claude how to inspect and write useful mobile UI structure instead of producing generic design descriptions.
-
----
-
-## How to make this repository public and nice to use
-
-### 1. Create the GitHub repo
-
-Create a new public GitHub repository named:
-
-```text
-claude-mobile-mvp-skills
-```
-
-Recommended visibility: **Public**
-
-Recommended topics:
-
-```text
-claude-code, claude-skills, figma, figma-mcp, swiftui, ios, mobile-app, app-store, mvp, product-design
-```
-
-### 2. Push the files
-
-From the repository folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial mobile MVP Claude Code skills"
-git branch -M main
-git remote add origin https://github.com/klionskiy/claude-mobile-mvp-skills.git
-git push -u origin main
-```
-
-### 3. Create a release
-
-In GitHub:
-
-1. Go to **Releases**
-2. Click **Draft a new release**
-3. Tag: `v1.0.0`
-4. Title: `v1.0.0 — Initial release`
-5. Notes:
-
-```md
-Initial release with three Claude Code skills:
-- mobile-figma-designer
-- swiftui-from-figma
-- appstore-mvp-review
-```
-
-### 4. Improve trust
-
-Add to the repo description:
-
-```text
-Claude Code skills for designing mobile MVPs in Figma, implementing SwiftUI screens, and reviewing App Store readiness.
-```
-
-Pin the repo on your GitHub profile if you want people to discover it.
-
-### 5. Keep versions clean
-
-When you edit skills later:
-
-1. Update the skill text
-2. Bump `version` in:
-   - `.claude-plugin/marketplace.json`
-   - `plugins/mobile-mvp-product/.claude-plugin/plugin.json`
-3. Commit with a clear message
-4. Create a new GitHub release, for example `v1.1.0`
-
----
-
-## Suggested workflow
-
-```text
-Idea / reference apps
-        ↓
-/mobile-mvp-product:appstore-mvp-review
-        ↓
-/mobile-mvp-product:mobile-figma-designer
-        ↓
-Manual Figma review / polish
-        ↓
-/mobile-mvp-product:swiftui-from-figma
-        ↓
-Build, test, submit
-```
-
----
-
-## Contributing
-
-Pull requests are welcome.
-
-Good contributions:
-
-- better trigger descriptions
-- more mobile design patterns
-- SwiftUI architecture mapping examples
-- App Store review checklist improvements
-- example prompts for real MVP categories
-
-Avoid adding executable scripts unless they are clearly necessary and safe.
 
 ---
 
